@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  Pay Your Rent!
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Tool used to collect rent from roommates using Venmo.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  This app greatly speeds up the rent gathering process. Instead of manually requesting each person for each rent and rent-related item (PG&E, Comcast, etc), this app can run it all at once.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  Rent is a tedious process that could automation. 
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  The app collects rent from all roommates at once and even reminds you when you have to collect it. 
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  "I want to use this - so I made it."
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "I no longer have to remember to collect rent. This app helps me stay organized!"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
