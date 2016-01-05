@@ -16,7 +16,10 @@ module.exports = {
       pge_total: body.pge,
       comcast_total: body.comcast,      
     };    
-    createCharge(newCharge);
+    createCharge(newCharge).then(function(){
+      res.send('got it');
+    })
+
        
   },
   getCharges: function(req, res, next) {    

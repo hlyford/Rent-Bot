@@ -15,9 +15,13 @@ angular.module('payrent.charge', [])
   $scope.data.token;
   $scope.data.month;
 
-  
+  $scope.showGreenChecks = function(input_field) {
+    $('.checks').show();    
+  }
+
 
   $scope.sendRent = function() {
+    
     for (var i = 0; i < $scope.data.roommates.length; i++) {
       $scope.data.roommates[i].total = $scope.data.roommates[i].amount + ($scope.data.pge)/5 + ($scope.data.comcast)/5;
     }
@@ -27,9 +31,12 @@ angular.module('payrent.charge', [])
       method: 'POST',
       url: '/sendRent',
       data: $scope.data
-    });    
+    }).then(function(){
+      console.log('response back');
+      setTimeout($scope.showGreenChecks, 500);
+    })    
 
   };
 
  
-  });
+});

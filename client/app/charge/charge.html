@@ -19,9 +19,12 @@
 					<td>{{roommate.name}}</td> 
 					<td>${{roommate.amount}}</td> 
 					<td>${{ (roommate.amount * 1) + (data.pge/5 * 1) + (data.comcast/5 * 1) }}</td>
+					<td class=" {{ 'checkTd' + roommate.name }} checks" hidden><img class="checksImg" src="http://www.clker.com/cliparts/9/I/e/1/i/B/dark-green-check-mark-hi.png" > <td> 
+
 			</tr> 			
 		</tbody> 
 	</table>
-	Venmo key: <input ng-model="data.token" type="text" placeholder="Enter Venmo key" class="spacing">
+	<a href="https://venmo.com/" target="_blank" > <img src="https://lh3.googleusercontent.com/UvEwv56zTj13dO1qr4fj4wDDc5Fwzc6O1ke4DnBSKN1Wa42zBDzGREwVLD9HqEAoIzs=w300" class="small-image" ></a>
+	<input ng-model="data.token" type="text" placeholder="Enter Venmo key" class="spacing">
 	<button class='btn btn-danger' ng-click="sendRent()">Charge rent</button>
 </div>

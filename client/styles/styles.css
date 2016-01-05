@@ -3,12 +3,21 @@
 	font-size: 1.6em;
 }
 #newHere {
-	margin: 10px 0 0 500px;	
+	margin: 5px 0 0 500px;	
 	color: white;
+	font-size: 1.2em;
 }
 .spacing {
 	margin: 1%;
 }
 .navbar-nav li {
 	font-size: 1.4em;
+}
+.small-image {
+	width: 60px;
+}
+.checks{	
+}
+.checksImg {
+	width: 40px;
 }

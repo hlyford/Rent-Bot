@@ -1,4 +1,5 @@
-var app = angular.module('payrent', ['payrent.charge' ,'ngRoute']);
+var app = angular.module('payrent', 
+  ['payrent.charge', 'payrent.history' ,'ngRoute']);
 
 app.config(function ($routeProvider, $httpProvider) {
   $routeProvider
@@ -10,6 +11,11 @@ app.config(function ($routeProvider, $httpProvider) {
       templateUrl: 'app/landing.html',
       controller: 'ChargeController'
     })   
+    .when('/history', {
+      templateUrl: 'app/history/history.html',
+      controller: 'HistoryController'
+    })   
+    .otherwise({redirectTo: '/rent'});
     // Your code here
 
     // We add our $httpInterceptor into the array

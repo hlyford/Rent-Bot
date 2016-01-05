@@ -1,0 +1,21 @@
+<div class='container-main'>  
+ 
+	<table class="table table-striped spacing"> 
+		<thead> 
+			<tr> 				
+				<th>Month</th> 
+				<th>PG&E Amount</th> 
+				<th>Comcast Amount</th> 
+			</tr> 
+		</thead> 
+			<tbody> 
+			<tr ng-repeat="charge in data"> 				
+					<td>{{ charge.month }}</td> 
+					<td>${{ charge.pge }}</td> 
+					<td>${{ charge.comcast }}</td> 
+			</tr> 			
+		</tbody> 
+	</table>
+
+
+</div>
