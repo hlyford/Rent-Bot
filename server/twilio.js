@@ -10,7 +10,8 @@ module.exports = function() {
 	var reminder = function() {
 		console.log('sending twilions');
 		client.messages.create({
-	    body: "Hey Henry, it's time to collect the rent!",
+	    body: "Hey Henry, it's time to collect the rent!" +
+	     " Daniel Alegre, PO box 472470, SF, CA 94147",
 	    to: "+19079478364",
 	    from: "+12513334459"
 		}, function(err, message) {
@@ -20,9 +21,3 @@ module.exports = function() {
 	};
 	reminder();
 };
-
-// module.exports.runTwilio = {
-// 	reminder2: function() {
-// 		reminder();
-// 	}
-// };
