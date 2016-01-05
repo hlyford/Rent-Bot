@@ -9,6 +9,8 @@
  -->
     
     <script src="public/jquery.js"></script>
+    <script src="public/bootstrap.js"></script>
+    <script src="public/main.js"></script>
     <script src="lib/angular.js"></script>
     <script src="lib/angular-route.js"></script>
     <script src="app/charge/charge.js"></script>
@@ -33,13 +35,111 @@
             <li class="active"><a href="#rent">Charge rent</a></li>
             <li><a href="#history">Rent history</a></li>                      
           </ul>
-          <span class="btn btn-primary new-user" id='newHere'>New user?</span> 
+          <span class="btn btn-primary new-user" id='newHere' data-toggle="modal" data-target="#signupModal">New user?</span> 
         </div><!--/.nav-collapse -->
       </div>
     </nav>
     <div>       
      
       <div ng-view></div>
+    </div>
+
+    <!-- SIGN UP MODAL BELOW -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Register for account</h4>
+          </div>
+          <div class="modal-body md1">
+            <form class="form-horizontal">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Phone #</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="Phone Number">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group fg1">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#signupModal2">Sign up</button>
+              </div>
+            </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            Already a user? <button type="button" class="btn btn-default">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rooommate modal BELOW -->
+    <div class="modal fade" id="signupModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Enter your roommates</h4>
+          </div>
+          <div class="modal-body md1">
+            <form class="form-horizontal">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Roommate</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="Roommate #1">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Roommate</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="Roommate #2">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Roommate</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="Roommate #3">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Roommate</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPassword3" placeholder="Roommate #4">
+              </div>
+            </div>
+                        
+          </form>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            Already a user? <button type="button" class="btn btn-default">I'm ready!</button>
+          </div>
+        </div>
+      </div>
     </div>
       
   </body>

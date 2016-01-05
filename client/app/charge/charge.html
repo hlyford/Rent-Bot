@@ -1,7 +1,7 @@
 <div class='container-main'>  
   <div>
   	Month: <input ng-model="data.month" type="text" placeholder="Enter the month" class="spacing"> <br>
-  	PG&E Total: <input ng-model='data.pge' type="text" placeholder="Enter PG&E total" class="spacing"><br>
+  	<a href="https://m.pge.com/#login" target="_blank" >PG&E Total:</a> <input ng-model='data.pge' type="text" placeholder="Enter PG&E total" class="spacing"><br>
   	Comcast total: <input ng-model='data.comcast' type="text" placeholder="Enter Comcast total" class="spacing">
   </div>
 
@@ -24,8 +24,8 @@
 			</tr> 			
 		</tbody> 
 	</table>
-	<a href="https://venmo.com/" target="_blank" > <img src="https://lh3.googleusercontent.com/UvEwv56zTj13dO1qr4fj4wDDc5Fwzc6O1ke4DnBSKN1Wa42zBDzGREwVLD9HqEAoIzs=w300" class="small-image" ></a>
+	<a href="https://venmo.com/" target="_blank" > <img src="https://lh3.googleusercontent.com/UvEwv56zTj13dO1qr4fj4wDDc5Fwzc6O1ke4DnBSKN1Wa42zBDzGREwVLD9HqEAoIzs=w300" class="small-image" data-toggle="tooltip" data-placement="bottom" title="Go to Venmo and copy your user token"></a>
 	<input ng-model="data.token" type="text" placeholder="Enter Venmo key" class="spacing">
-	<button class='btn btn-danger chargeBtn biggerText' ng-click="sendRent()">Charge rent</button>
+	<button class='btn btn-danger chargeBtn biggerText' ng-click="sendRent()" >Charge rent</button>
 	<button class='btn btn-success rentHistoryBtn hidden'  >View rent history</button>
 </div>
