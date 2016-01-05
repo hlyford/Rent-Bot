@@ -26,19 +26,19 @@ Once the project moves into development, the press release can be used as a touc
   This app greatly speeds up the rent gathering process. Instead of manually requesting each person for each rent and rent-related item (PG&E, Comcast, etc), this app can run it all at once.
 
 ## Problem ##
-  Rent is a tedious process that could automation. 
+  Rent is a tedious process that could use automation. Even though it only takes a few minutes every month, it's a pain to remember to do it. 
 
 ## Solution ##
-  The app collects rent from all roommates at once and even reminds you when you have to collect it. 
+  The app collects rent from all roommates at once and even reminds you when you have to collect it. If used by landlords, it could also be used start to finish to pay your apartment's rent.
 
 ## Quote from You ##
   "I want to use this - so I made it."
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  Just go to [websitePending].com and try it out. You will need a Venmo access token.
 
 ## Customer Quote ##
   "I no longer have to remember to collect rent. This app helps me stay organized!"
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  Check out the site. The small aspect of your life that deals with paying rent will never be the same!

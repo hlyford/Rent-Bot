@@ -36,7 +36,7 @@ angular.module('payrent.charge', [])
       data: $scope.data
     }).then(function(){
       console.log('response back');
-      setTimeout($scope.showGreenChecks, 500);
+      setTimeout($scope.showGreenChecks, 800);
     })    
 
   };

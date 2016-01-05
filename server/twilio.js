@@ -11,7 +11,7 @@ module.exports = function() {
 		console.log('sending twilions');
 		client.messages.create({
 	    body: "Hey Henry, it's time to collect the rent!" +
-	     " Daniel Alegre, PO box 472470, SF, CA 94147",
+	     " Daniel Alegre, PO box 472470, SF, CA 94147 | PG&E: college pw",
 	    to: "+19079478364",
 	    from: "+12513334459"
 		}, function(err, message) {

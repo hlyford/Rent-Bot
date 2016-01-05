@@ -18,8 +18,8 @@ module.exports = {
       pge_total: body.pge,
       comcast_total: body.comcast,      
     };    
-    // send to venmo with callback to here
-    sendToVenmo(req.body);
+    // *** TURN ON send to venmo with callback to here  *******
+    // sendToVenmo(req.body);
 
     createCharge(newCharge).then(function(){
       res.send('got it');
