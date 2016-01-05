@@ -12,16 +12,21 @@ angular.module('payrent.charge', [])
 
   $scope.data.pge = 0;
   $scope.data.comcast = 70;
-  $scope.total = function (roommateAmt, PgeAmt, comcastAmt) {
-    return roommateAmt + PgeAmt + comcastAmt;
-  }
+  $scope.data.token;
+  $scope.data.month;
+
+  
 
   $scope.sendRent = function() {
+    for (var i = 0; i < $scope.data.roommates.length; i++) {
+      $scope.data.roommates[i].total = $scope.data.roommates[i].amount + ($scope.data.pge)/5 + ($scope.data.comcast)/5;
+    }
+    console.log($scope.data.roommates);    
 
-    return $http({
+    $http({
       method: 'POST',
-      url: '/rentData',
-      data: data
+      url: '/sendRent',
+      data: $scope.data
     });    
 
   };

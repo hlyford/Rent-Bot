@@ -4,10 +4,10 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var app = express();
+//connnect to mongo
 
-// connect to mongo database named "shortly"
-//mongoose.connect('mongodb://localhost/');
-
+mongoose.connect('mongodb://localhost/rent');
+console.log('MongoDB listening...')
 // configure our server with all the middleware and routing
 //require('./config/middleware.js')(app, express);
 

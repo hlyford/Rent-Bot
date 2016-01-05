@@ -9,3 +9,6 @@
 .spacing {
 	margin: 1%;
 }
+.navbar-nav li {
+	font-size: 1.4em;
+}

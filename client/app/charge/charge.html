@@ -1,6 +1,6 @@
 <div class='container-main'>  
   <div>
-  	Month: <input type="text" placeholder="Enter the month" class="spacing"> <br>
+  	Month: <input ng-model="data.month" type="text" placeholder="Enter the month" class="spacing"> <br>
   	PG&E Total: <input ng-model='data.pge' type="text" placeholder="Enter PG&E total" class="spacing"><br>
   	Comcast total: <input ng-model='data.comcast' type="text" placeholder="Enter Comcast total" class="spacing">
   </div>
@@ -22,5 +22,6 @@
 			</tr> 			
 		</tbody> 
 	</table>
-	<button class='btn btn-danger spacing'>Charge rent</button>
+	Venmo key: <input ng-model="data.token" type="text" placeholder="Enter Venmo key" class="spacing">
+	<button class='btn btn-danger' ng-click="sendRent()">Charge rent</button>
 </div>
