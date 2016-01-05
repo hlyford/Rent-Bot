@@ -16,7 +16,9 @@ angular.module('payrent.charge', [])
   $scope.data.month;
 
   $scope.showGreenChecks = function(input_field) {
-    $('.checks').show();    
+    $('.checks').show();   
+    $('.chargeBtn').hide();
+    $('.rentHistoryBtn').removeClass('hidden');
   }
 
 

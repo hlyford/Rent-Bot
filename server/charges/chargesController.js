@@ -6,6 +6,7 @@ var createCharge = Q.nbind(Charge.create, Charge);
 var findAllCharges = Q.nbind(Charge.find, Charge);
 //var findAllLinks = Q.denodeify(Link.find, Link);
 
+
 module.exports = {
 
   addRent: function(req, res, next) {
@@ -16,11 +17,13 @@ module.exports = {
       pge_total: body.pge,
       comcast_total: body.comcast,      
     };    
+    // send to venmo with callback to here
+    sendToVenmo(req.body);
+
     createCharge(newCharge).then(function(){
       res.send('got it');
-    })
+    })      
 
-       
   },
   getCharges: function(req, res, next) {    
     var records;
@@ -28,22 +31,28 @@ module.exports = {
       .then(function(records) {
         records = records;
         console.log('now', records);
-      })  
-    
-    res.send(JSON.stringify(records));
-  },
-
-  sendToVenmo: function(data) {
-    // STILL NEED TO DO ALL THIS
-     // organize the data, add the git token, send off
-
-    // request.post({url:'https://api.venmo.com/v1', formData: formData}, function optionalCallback(err, httpResponse, body) {
-    //   if (err) {
-    //     return console.error('upload failed:', err);
-    //   }
-    //   console.log('Upload successful!  Server responded with:', body);
-    // });
-  },
-
+        res.send(JSON.stringify(records));
+      })          
+  }
 
 };
+
+sendToVenmo = function(data) {    
+    var month = data.month, token = data.token;
+    // loop through each item in the array of roommates
+      for (var i = 0; i < data.roommates.length; i++) {
+        var formData = {token: token, phone: data.roommates[i].phone, amount: data.roommates[i].total, 
+          note: data.roommates[i].name + ", your rent, PG&E, and Comcast total for " + month + " is " + data.roommates[i].total
+        };
+        console.log(formData);
+      }
+
+      // prepare the form data for that person
+        // send using this module      
+        // request.post({url:'https://api.venmo.com/v1', formData: formData}, function optionalCallback(err, httpResponse, body) {
+        //   if (err) {
+        //     return console.error('upload failed:', err);
+        //   }
+        //   console.log('Upload successful!  Server responded with:', body);
+        // });
+  };
