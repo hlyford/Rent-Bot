@@ -4,10 +4,11 @@ angular.module('payrent.charge', [])
 
   $scope.data = {};
   $scope.data.roommates = [
-    {name: 'Claire', amount: 200, phone: 44},
-    {name: 'Cody', amount: 250, phone: 44},
-    {name: 'Brittany', amount: 7000, phone: 44},
-    {name: 'Cody', amount: 175, phone: 44}
+  // PLACE HOLDER DATA
+    {name: 'Claire', amount: 0.01, phone: 9079474631},
+    {name: 'Chrysan', amount: 0.01, phone: 16505186063},
+    {name: 'Brittany', amount: 0.01, phone: 9079474631},
+    {name: 'Cody', amount: 0.01, phone: 16505186063}
   ];
 
   $scope.data.pge = 0;

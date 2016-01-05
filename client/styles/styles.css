@@ -2,10 +2,15 @@
 	margin: 10% 30% 0 10%;
 	font-size: 1.6em;
 }
-#newHere {
-	margin: 5px 0 0 500px;	
+.newHere {	
 	color: white;
 	font-size: 1.2em;
+}
+#newHere {
+	margin: 5px 0 0 400px;	
+}
+#testTwilio {
+	margin: 5px 0 0 10px;	
 }
 .spacing {
 	margin: 1%;
@@ -23,4 +28,7 @@
 }
 .biggerText {
 	font-size:  1.007em;
+}
+.roomModal {
+	width: 670px;
 }

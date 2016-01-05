@@ -35,7 +35,8 @@
             <li class="active"><a href="#rent">Charge rent</a></li>
             <li><a href="#history">Rent history</a></li>                      
           </ul>
-          <span class="btn btn-primary new-user" id='newHere' data-toggle="modal" data-target="#signupModal">New user?</span> 
+          <span class="btn btn-primary newHere" id='newHere' data-toggle="modal" data-target="#signupModal">New user?</span> 
+          <span class="btn btn-warning newHere" id='testTwilio' ng->Test Twilio</span> 
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -84,7 +85,7 @@
             </div>
             <div class="form-group fg1">
               <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#signupModal2">Sign up</button>
+                <button type="submit" class="btn btn-success signupBtn" data-toggle="modal" data-target="#signupModal2">Sign up</button>
               </div>
             </div>
           </form>
@@ -99,44 +100,74 @@
 
     <!-- Rooommate modal BELOW -->
     <div class="modal fade" id="signupModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog roomModal" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="exampleModalLabel">Enter your roommates</h4>
           </div>
-          <div class="modal-body md1">
-            <form class="form-horizontal">
-            <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Roommate</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputEmail3" placeholder="Roommate #1">
+          <div class="modal-body">
+            
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="exampleInputName2">Roommate #1</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
               </div>
-            </div>
-            <div class="form-group">
-              <label for="inputPassword3" class="col-sm-2 control-label">Roommate</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputPassword3" placeholder="Roommate #2">
+              <div class="form-group">
+                <label for="exampleInputEmail2"></label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Phone number">
+              </div> 
+              <div class="form-group">
+                <label for="exampleInputEmail2"></label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Rent amount">
               </div>
-            </div>
-            <div class="form-group">
-              <label for="inputPassword3" class="col-sm-2 control-label">Roommate</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputPassword3" placeholder="Roommate #3">
+              <br><br>   
+               <div class="form-group">
+                <label for="exampleInputName2">Roommate #2</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
               </div>
-            </div>
-            <div class="form-group">
-              <label for="inputPassword3" class="col-sm-2 control-label">Roommate</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputPassword3" placeholder="Roommate #4">
+              <div class="form-group">
+                <label for="exampleInputEmail2"></label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Phone number">
+              </div> 
+              <div class="form-group">
+                <label for="exampleInputEmail2"></label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Rent amount">
+              </div> 
+              <br><br>
+               <div class="form-group">
+                <label for="exampleInputName2">Roommate #3</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
               </div>
-            </div>
-                        
-          </form>
+              <div class="form-group">
+                <label for="exampleInputEmail2"></label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Phone number">
+              </div> 
+              <div class="form-group">
+                <label for="exampleInputEmail2"></label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Rent amount">
+              </div> 
+              <br><br>
+               <div class="form-group">
+                <label for="exampleInputName2">Roommate #4</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail2"></label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Phone number">
+              </div> 
+              <div class="form-group">
+                <label for="exampleInputEmail2"></label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Rent amount">
+              </div>              
+            </form>
+
+
+
           </div>
           <div class="modal-footer">
             <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-            Already a user? <button type="button" class="btn btn-default">I'm ready!</button>
+            <button type="button" class="btn btn-default">I'm ready!</button>
           </div>
         </div>
       </div>

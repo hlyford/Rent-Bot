@@ -4,6 +4,7 @@ var Charge = require('./chargesModel.js');
 
 var createCharge = Q.nbind(Charge.create, Charge);
 var findAllCharges = Q.nbind(Charge.find, Charge);
+var request = require('request');
 //var findAllLinks = Q.denodeify(Link.find, Link);
 
 
@@ -41,18 +42,23 @@ sendToVenmo = function(data) {
     var month = data.month, token = data.token;
     // loop through each item in the array of roommates
       for (var i = 0; i < data.roommates.length; i++) {
-        var formData = {token: token, phone: data.roommates[i].phone, amount: data.roommates[i].total, 
-          note: data.roommates[i].name + ", your rent, PG&E, and Comcast total for " + month + " is " + data.roommates[i].total
+        var formData = {audience: 'private', access_token: token, phone: data.roommates[i].phone, amount: data.roommates[i].total, 
+          note: data.roommates[i].name + ", your rent, PG&E, and Comcast total for " + month + " is $" + data.roommates[i].total
         };
         console.log(formData);
+        //send to Venmo
+        request.post({url:'https://api.venmo.com/v1/payments', formData: formData}, function optionalCallback(err, httpResponse, body) {
+          if (err) {
+            return console.error('upload failed:', err);
+          }
+          console.log('Upload successful!  Server responded with:', body);
+        });
       }
-
-      // prepare the form data for that person
-        // send using this module      
-        // request.post({url:'https://api.venmo.com/v1', formData: formData}, function optionalCallback(err, httpResponse, body) {
-        //   if (err) {
-        //     return console.error('upload failed:', err);
-        //   }
-        //   console.log('Upload successful!  Server responded with:', body);
-        // });
+              
+      
   };
+
+
+
+
+

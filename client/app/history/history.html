@@ -9,7 +9,7 @@
 			</tr> 
 		</thead> 
 			<tbody> 
-			<tr ng-repeat="charge in data | orderBy:'-created_at'"> 				
+			<tr ng-repeat="charge in data | orderBy:'reverse'"> 				
 					<td>{{ charge.month }}</td> 
 					<td>${{ charge.pge_total }}</td> 
 					<td>${{ charge.comcast_total }}</td> 

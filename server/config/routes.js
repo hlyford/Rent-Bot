@@ -5,6 +5,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var request = require('request');
 var chargesController = require('../charges/chargesController');
+var twilio = require('../twilio');
 
 module.exports = function (app, express) {
 
@@ -23,7 +24,13 @@ module.exports = function (app, express) {
   //recieve the data from the client here
   app.post('/sendRent', chargesController.addRent);
   app.get('/sendRent', chargesController.getCharges);
-    
+
+  // Twilio test route
+  app.get('/testTwilio', function(req, res) {
+    twilio();
+    res.send('got twilio');
+
+  });
 
 
 };
