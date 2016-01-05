@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <title>Pay Your Rent</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ -->
     
-    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="public/jquery.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="app/charge/charge.js"></script> 
+    <script src="app/app.js"></script> 
   </head>
   <body>
+    
      <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -25,9 +29,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Charge rent</a></li>
-            <li><a href="#about">Rent history</a></li>            
+            <li class="active"><a href="#rent">Charge rent</a></li>
+            <li><a href="#about">Rent history</a></li>                      
           </ul>
+          <span class="btn btn-success" id='newHere'>New user?</span> 
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -35,8 +40,6 @@
      
       <div ng-view></div>
     </div>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="app/charge/charge.js"></script>   
+      
   </body>
 </html>

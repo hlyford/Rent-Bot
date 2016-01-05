@@ -1,4 +1,26 @@
-<div id='container'>
-  Charge rent
+<div class='container-main'>  
+  <div>
+  	Month: <input type="text" placeholder="Enter the month" class="spacing"> <br>
+  	PG&E Total: <input ng-model='data.pge' type="text" placeholder="Enter PG&E total" class="spacing"><br>
+  	Comcast total: <input ng-model='data.comcast' type="text" placeholder="Enter Comcast total" class="spacing">
+  </div>
 
+
+	<table class="table table-striped spacing"> 
+		<thead> 
+			<tr> 				
+				<th>First Name</th> 
+				<th>Rent</th> 
+				<th>Total</th> 
+			</tr> 
+		</thead> 
+			<tbody> 
+			<tr ng-repeat="roommate in data.roommates"> 				
+					<td>{{roommate.name}}</td> 
+					<td>${{roommate.amount}}</td> 
+					<td>${{ (roommate.amount * 1) + (data.pge/5 * 1) + (data.comcast/5 * 1) }}</td>
+			</tr> 			
+		</tbody> 
+	</table>
+	<button class='btn btn-danger spacing'>Charge rent</button>
 </div>
