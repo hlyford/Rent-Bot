@@ -2,31 +2,34 @@
 // var userController = require('../users/userController.js');
 // var helpers = require('./helpers.js'); // our custom middleware
 var path = require('path');
+var bodyParser = require('body-parser');
+var request = require('request');
 
 module.exports = function (app, express) {
 
-  app.set('views', __dirname + '/../../client');
+  app.set('views', path.join(__dirname, "/../../client"));  
   app.set('view engine', 'html');
-  app.use(express.static(path.join(__dirname, "../client")));
+  app.use(express.static(path.join(__dirname, "/../../client")));
+  app.use(bodyParser.urlencoded({ extended: true }));  
+  
 
-  app.get('/', function(req, res) {   
-    console.log(req); 
-    res.render('dummy');
-  });
+  // main index route
+  // app.get('/', function(req, res) {         
+  //   console.log(res);
+  //   res.render('dummy.html');
+  // });
+  //recieve the data from the client here
+  app.post('/sendRent', function(req, res) {
+    console.log(req.body);
+    // organize the data, add the git token, send off
 
-  // app.get('/:code', linksController.navToLink);
+    request.post({url:'https://api.venmo.com/v1', formData: formData}, function optionalCallback(err, httpResponse, body) {
+      if (err) {
+        return console.error('upload failed:', err);
+      }
+      console.log('Upload successful!  Server responded with:', body);
+    });
 
-  // app.post('/api/users/signin', userController.signin);
-  // app.post('/api/users/signup', userController.signup);
-  // app.get('/api/users/signedin', userController.checkAuth);
+  })
 
-  // // authentication middleware used to decode token and made available on the request
-  // // app.use('/api/links', helpers.decode);
-  // app.get('/api/links/', linksController.allLinks);
-  // app.post('/api/links/', linksController.newLink);
-
-  // // If a request is sent somewhere other than the routes above,
-  // // send it through our custom error handler
-  // app.use(helpers.errorLogger);
-  // app.use(helpers.errorHandler);
 };
