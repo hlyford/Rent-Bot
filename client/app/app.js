@@ -1,5 +1,5 @@
 var app = angular.module('payrent', 
-  ['payrent.charge', 'payrent.history' ,'ngRoute']);
+  ['payrent.charge', 'payrent.history', 'payrent.user', 'ngRoute']);
 
 app.config(function ($routeProvider, $httpProvider) {
   $routeProvider
@@ -15,8 +15,7 @@ app.config(function ($routeProvider, $httpProvider) {
       templateUrl: 'app/history/history.html',
       controller: 'HistoryController'
     })   
-    .otherwise({redirectTo: '/rent'});
-    // Your code here
+    .otherwise({redirectTo: '/rent'});    
 
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls

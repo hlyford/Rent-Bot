@@ -44,7 +44,9 @@ angular.module('payrent.charge', [])
     console.log('moving?');
     var img = $('.mover');
     img.removeClass('hidden');
-    $scope.startMoving(img);
+    setTimeout(function() {
+      $scope.startMoving(img);
+    }, 800);
   }
 
   $scope.sendRent = function() {    
