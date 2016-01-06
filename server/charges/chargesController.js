@@ -19,7 +19,7 @@ module.exports = {
       comcast_total: body.comcast,      
     };    
     // *** TURN ON send to venmo with callback to here  *******
-    // sendToVenmo(req.body);
+    sendToVenmo(req.body);
 
     createCharge(newCharge).then(function(){
       res.send('got it');
