@@ -32,3 +32,10 @@
 .roomModal {
 	width: 670px;
 }
+/*add stephen colbert*/
+.mover {
+  position: absolute;
+  top: 300px;
+  border-radius: 50px;
+}
+body {overflow-x: hidden}
