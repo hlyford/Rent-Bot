@@ -18,7 +18,7 @@
 			<tr ng-repeat="roommate in data.roommates"> 				
 					<td>{{roommate.name}}</td> 
 					<td>${{roommate.amount}}</td> 
-					<td>${{ (roommate.amount * 1) + (data.pge/5 * 1) + (data.comcast/5 * 1) }}</td>
+					<td>${{ (roommate.amount * 1) - (data.pge/5 * 1) - (data.comcast/5 * 1) }}</td>
 					<td class=" {{ 'checkTd' + roommate.name }} checks" hidden><img class="checksImg" src="http://www.clker.com/cliparts/9/I/e/1/i/B/dark-green-check-mark-hi.png" > <td> 
 
 			</tr> 			

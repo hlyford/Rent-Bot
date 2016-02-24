@@ -42,9 +42,13 @@ sendToVenmo = function(data) {
     var month = data.month, token = data.token;
     // loop through each item in the array of roommates
       for (var i = 0; i < data.roommates.length; i++) {
-        var formData = {audience: 'private', access_token: token, phone: data.roommates[i].phone, amount: data.roommates[i].total, 
-          note: data.roommates[i].name + ", your rent, PG&E, and Comcast total for " + month + " is $" + data.roommates[i].total
-        };
+        if (data.roommates[i].hasOwnProperty('phone')) {
+          var formData = { audience: 'private', access_token: token, phone: data.roommates[i].phone, amount: data.roommates[i].total, 
+          note: data.roommates[i].name + ", your rent, PG&E, and Comcast total for " + month + " is $" + -(data.roommates[i].total) }
+        } else {
+          var formData = { audience: 'private', access_token: token, email: data.roommates[i].email, amount: data.roommates[i].total, 
+          note: data.roommates[i].name + ", your rent, PG&E, and Comcast total for " + month + " is $" + -(data.roommates[i].total) }         
+        }        
         console.log(formData);
         //send to Venmo
         request.post({url:'https://api.venmo.com/v1/payments', formData: formData}, function optionalCallback(err, httpResponse, body) {
