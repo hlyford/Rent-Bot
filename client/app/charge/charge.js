@@ -6,10 +6,10 @@ angular.module('payrent.charge', [])
   $scope.data.roommates = [
   // PLACE HOLDER DATA
   // {name: 'Brittany', amount: -1, phone: 4085960517}
-    {name: 'Claire', amount: -1080.00, phone: 8052799089},
-    {name: 'Chrysan', amount: -1185.00, email: "chrysan.j.tung@gmail.com"},
-    {name: 'Brittany', amount: -1040.00, phone: 4085960517},
-    {name: 'Cody', amount: -910.00, phone: 9145060053}
+    // {name: 'Claire', amount: -1080.00, phone: 8052799089},
+    {name: 'Chrysan', amount: -1455.00, email: "chrysan.j.tung@gmail.com"},
+    {name: 'Brittany', amount: -1310.00, phone: 4085960517},
+    {name: 'Cody', amount: -1180.00, phone: 9145060053}
   ];
 
   $scope.data.pge = 0;
@@ -50,7 +50,7 @@ angular.module('payrent.charge', [])
 
   $scope.sendRent = function() {    
     for (var i = 0; i < $scope.data.roommates.length; i++) {
-      $scope.data.roommates[i].total = Math.ceil($scope.data.roommates[i].amount - ($scope.data.pge)/5 - ($scope.data.comcast)/5);
+      $scope.data.roommates[i].total = Math.ceil($scope.data.roommates[i].amount - ($scope.data.pge)/4 - ($scope.data.comcast)/4);
     }
     console.log($scope.data.roommates);    
 
@@ -63,7 +63,5 @@ angular.module('payrent.charge', [])
       setTimeout($scope.showGreenChecks, 800);
     })    
   };
-  
-
  
 });
